@@ -1,1 +1,139 @@
-/* Hoja de estilo */
+/* ===================
+   Ajustes generales
+=================== */
+
+/* Modelo de caja alternativo */
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Incluir el bullet dentro */
+
+* {
+    list-style-position: inside;
+}
+
+/* Margin y padding general */
+
+main, nav, header, footer {
+    max-width: 1024px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Estilos de <ul> del menú */
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Estilos de los <a> del menú */
+
+.menu a {
+    text-decoration: none;
+    color: #362476;
+    font-weight: 500;
+}
+
+.menu a:hover {
+    color: #4823cd;
+    text-decoration: underline;
+}
+
+/* Tipografía Inter */
+* {
+    font-family: "Inter", sans-serif;
+}
+
+/* H1 */
+
+h1, h2{
+    color: #362476;
+}
+
+/* H2 */
+
+h2 {
+    font-weight: 500;
+}
+
+/* Párrafos */
+
+p {
+    color:#4b5563;
+    font-weight: 300;
+}
+
+/* ===================
+   Testimonios
+=================== */
+
+/* Grid de testimonios */
+
+.testimonios-lista {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+/* Container del testimonio */
+
+.testimonio {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 2px 2px 20px rgba(222, 221, 222, 0.44);
+    list-style-type: none;
+}
+
+/* Avatar del testimonio */
+
+.testimonio-avatar {
+    border-radius: 50%;
+    width: 65px;
+    height: 65px; /* igual que el ancho */
+    object-fit: cover; /* útil si la imagen no es cuadrada */
+}
+
+/* Autor del testimonio */
+
+.testimonio-autor {
+    color:#362476;
+    font-weight: 500;
+}
+
+/* DIV avatar */
+
+.testimonio-persona {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+
+/*
+gray-50	#f9fafb
+gray-100	#f3f4f6
+gray-200	#e5e7eb
+gray-300	#d1d5db
+gray-400	#9ca3af
+gray-500	#6b7280
+gray-600	#4b5563
+gray-700	#374151
+gray-800	#1f2937
+gray-900	#111827
+gray-950	#030712
+*/
