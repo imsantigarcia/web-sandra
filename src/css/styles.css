@@ -2,6 +2,12 @@
    Ajustes generales
 =================== */
 
+/* Ocultar */
+
+.ocultar {
+    display: none;
+}
+
 /* Modelo de caja alternativo */
 
 * {
@@ -17,17 +23,92 @@
 
 /* Margin y padding general */
 
-main, nav, header, footer {
+.ajustar-ancho {
     max-width: 1024px;
     margin: 2rem auto;
     padding: 1rem;
 }
 
+/* Separación header y main */
+
+main {
+    padding-top: 4.5rem;
+}
+
+/* Imágenes superpuestas */
+
+    .contenedor {
+        position: relative;
+        width: fit-content;
+        max-width: 600px;
+    }
+
+    .contenedor img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 7px;
+        box-shadow: 2px 2px 20px rgba(222, 221, 222, 0.44);
+    }
+
+    .texto-superpuesto {
+        position: absolute;
+        top: 20px;
+        right: -400px; /* superpone el texto en el lateral derecho */
+        background: #362476;
+        padding: 2rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        max-width: 90%;
+        z-index: 1;
+        border-radius: 7px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .texto-superpuesto p, h3 {
+        color: white;
+    }
+
+    .texto-superpuesto p {
+        font-size: 1.1rem;
+    }
+
+    .texto-superpuesto h3 {
+        margin-top: 0;
+    }
+
 /* Header */
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Ocupa todo el ancho de pantalla */
+  background-color: white;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);  
+}
+
+/* El contenedor interior mantiene el ancho limitado */
+header .ajustar-ancho {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* Logo y nombre */
+
+.logo {
     display: flex;
-    justify-content: space-between;
+    gap: 1rem;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
 }
 
 /* Estilos de <ul> del menú */
@@ -35,7 +116,7 @@ header {
 .menu {
     list-style-type: none;
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     align-items: center;
 }
 
@@ -45,6 +126,16 @@ header {
     text-decoration: none;
     color: #362476;
     font-weight: 500;
+    font-size: 1.1rem;
+}
+
+/* Botón hamburguesa oculto en escritorio */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 .menu a:hover {
@@ -63,6 +154,11 @@ h1, h2{
     color: #362476;
 }
 
+h1 {
+    font-size: 1.6rem;
+    white-space: nowrap;
+}
+
 /* H2 */
 
 h2 {
@@ -76,16 +172,154 @@ p {
     font-weight: 300;
 }
 
+/* Encabezado de sección */
+
+.encabezado {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.subtitulo {
+    font-size: 1.2rem;
+}
+
+/* ===================
+   Swiper
+=================== */
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 7px;
+      padding: 2rem 0rem;
+      width: 50%;
+    }
+
+/* ===================
+   Trayectoria
+=================== */
+
+/* Caja de función */
+
+.caja-funcion {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 2px 2px 20px rgba(222, 221, 222, 0.44);
+    list-style-type: none;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* H3 */
+
+.caja-h3 {
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #362476;
+}
+
+/* Párrafo */
+
+.caja-parrafo {
+    font-size: 1.2rem;
+    color: #6b7280;
+}
+
+/* Caja púrpura */
+
+.fondo-purpura {
+    background-color: #362476;
+    padding: 0.5rem;
+    display: inline-block;
+    border-radius: 5px;
+    width: fit-content;
+}
+
+/* Icono SVG */
+
+.svg-funcion {
+    fill: white;
+}
+
+/* Subrayado */
+
+.subrayado {
+    display: inline;
+    box-shadow: inset 0 -0.3em 0 rgba(54, 36, 118, 0.15);
+}
+
+/* ===================
+   Sobre mí
+=================== */
+
+.sobre-mi {
+  display: flex;
+  gap: 2rem;
+  position: relative;
+  margin: 4rem 0;
+  align-items: center; /* opcional, para centrar verticalmente */
+}
+
+.sobre-mi .encabezado {
+  width: 100%;
+  margin-bottom: 2rem;
+  flex-basis: 100%;
+}
+
+.sobre-mi .img-lado {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+}
+
+.sobre-mi .texto-superpuesto {
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 2;
+  transform: translateX(-40px); /* Ajústalo si la imagen está a la izquierda */
+  flex: 1;
+}
+
 /* ===================
    Testimonios
 =================== */
+
+/* Degradado suave */
+
+.degradado {
+    background: linear-gradient(to bottom, #3624760d, transparent);
+}
 
 /* Grid de testimonios */
 
 .testimonios-lista {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 2.5rem;
+}
+
+/* Testimono cita */
+
+.testimonio-cita {
+    font-size: 1.2rem;
+    color: #6b7280;
 }
 
 /* Container del testimonio */
@@ -93,9 +327,14 @@ p {
 .testimonio {
     background-color: #ffffff;
     border-radius: 8px;
-    padding: 1.5rem;
+    padding: 2rem;
     box-shadow: 2px 2px 20px rgba(222, 221, 222, 0.44);
     list-style-type: none;
+    transition: 0.5s;
+}
+
+.testimonio:hover {
+    background-color: #f9fafb;
 }
 
 /* Avatar del testimonio */
@@ -105,6 +344,7 @@ p {
     width: 65px;
     height: 65px; /* igual que el ancho */
     object-fit: cover; /* útil si la imagen no es cuadrada */
+    aspect-ratio: 1 / 1;
 }
 
 /* Autor del testimonio */
@@ -112,6 +352,13 @@ p {
 .testimonio-autor {
     color:#362476;
     font-weight: 500;
+    font-size: 1.1rem;
+}
+
+/* Cargo del autor */
+
+.testimonio-cargo {
+    font-size: 1.1rem;
 }
 
 /* DIV avatar */
@@ -123,6 +370,66 @@ p {
     margin-top: 1rem;
 }
 
+/* ===================
+   Redes sociales
+=================== */
+
+.seccion-redes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 6rem 0rem 2rem 0rem;
+}
+
+.h2-seccion {
+    text-align: center;
+}
+
+/* ul de redes sociales */
+
+.lista-redes {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem 0rem;
+}
+
+/* Iconos SVG */
+
+.svg {
+    color: #362476;
+    transition: 0.5s;
+}
+
+.svg:hover {
+    color: #7758e9; 
+}
+
+/* ===================
+   Footer
+=================== */
+
+footer {
+    background-color: #362476;
+    padding: 2rem 0rem;
+}
+
+/* Ajustar el ancho del contenido */
+
+.pie {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Texto del footer */
+
+footer p {
+    color: #f9fafb;
+}
 
 /*
 gray-50	#f9fafb
@@ -137,3 +444,75 @@ gray-800	#1f2937
 gray-900	#111827
 gray-950	#030712
 */
+
+@media (max-width: 480px) 
+{ 
+    /* móviles pequeños */ 
+        .pie {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .testimonios-lista {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) 
+{ 
+    /* móviles grandes y tablets vertical */ 
+    .pie {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .testimonios-lista {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Header adjustments */
+    header .ajustar-ancho {
+        flex-wrap: wrap; /* Allow items to wrap */
+        justify-content: space-between;
+    }
+
+    .menu {
+        display: none; /* Hide menu by default on smaller screens */
+        flex-direction: column;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        top: 100%; /* Position below the header */
+        left: 0;
+        padding: 1rem 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        z-index: 999;
+        transition: transform 0.3s ease-in-out;
+        transform: translateY(-100%); /* Start off-screen above */
+        align-items: center; /* Center menu items */
+        gap: 1rem; /* Adjust gap for stacked items */
+    }
+
+    .menu.menu-open {
+        display: flex; /* Show menu when menu-open class is active */
+        transform: translateY(0); /* Slide into view */
+    }
+
+    .menu-toggle {
+        display: block; /* Show hamburger button */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) 
+{ 
+    /* tablets horizontal y portátiles */ 
+}
+
+@media (min-width: 1025px) 
+{ 
+    /* escritorios y pantallas grandes */ 
+}

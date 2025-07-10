@@ -7,15 +7,17 @@
         <!--Configuración de la vista en dispositivos móviles-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!--Título del sitio-->
-        <title>Sitio web sin título</title>
+        <title>Sandra Pàmies</title>
         <!--Descripción de la página-->
         <meta name="description" content="Descripción">
         <!--Autor-->
         <meta name="author" content="Autor">
         <!--Favicon-->
-        <link rel="icon" href="img/favicon.png" type="image/png" sizes="32x32">
+        <link rel="icon" href="img/favicon.ico" type="image/png" sizes="32x32">
         <!--Hoja de estilo-->
         <link rel="stylesheet" href="css/styles.css">
+        <!--Estilos de Swiper-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <!--Tipogprafía-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,64 +28,178 @@
 
             <!--Header-->
             <header>
+                <div class="ajustar-ancho">
                 <!--Menú-->
-                <h1>Sandra Pàmies</h1>
+                    <a href="/" class="logo">
+                        <img src="img/logo.png" alt="" width="50" height="50">
+                        <h1>Sandra Pàmies</h1>
+                    </a>
+
+                <!-- Botón hamburguesa -->
+                <button class="menu-toggle" aria-label="Abrir menú">
+                    ☰
+                </button>
 
                 <ul class="menu">
                     <!--Sobre mí-->
                     <li>
-                        <a href="/#sobre-mi">Sobre mí</a>
+                        <a href="#sobre-mi">Sobre mí</a>
                     </li>
                     <!--Testimonios-->
                     <li>
-                        <a href="/#testimonios">Testimonios</a>
+                        <a href="#testimonios">Testimonios</a>
                     </li>
                     <!--Testimonios-->
                     <li>
-                        <a href="/#experiencia">Experiencia</a>
+                        <a href="#experiencia">Experiencia</a>
                     </li>
                     <!--Contacto-->
                     <li>
-                        <a href="/#contacto">Contacto</a>
+                        <a href="#contacta">Contacto</a>
                     </li>
                 </ul>
+                </div>
             </header>
 
                 <!--Main-->
-                <main>
+                <main class="degradado">
 
                     <!--Hero-->
-                    <section>
+                    <section class="ajustar-ancho ocultar">
+                        <div class="contenedor">
+                            <div>
+                                <img src="https://placehold.co/600x400" alt="">
+                            </div>
+                            <div class="texto-superpuesto">
+                                <h3>Título de prueba</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis lectus vel magna convallis consectetur. Cras ante velit, eleifend ut nisi imperdiet, imperdiet ornare risus.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis lectus vel magna convallis consectetur. Cras ante velit, eleifend ut nisi imperdiet, imperdiet ornare risus.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis lectus vel magna convallis consectetur. Cras ante velit, eleifend ut nisi imperdiet, imperdiet ornare risus.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!--Trayectoria-->
+                    <section class="ajustar-ancho ocultar">
+                        <!--Encabezado-->
+                        <div class="encabezado">
+                            <h2>Testimonios</h2>
+                            <p class="subtitulo">Esto es lo que dicen de mí</p>
+                        </div>
+                        <!--Cajas-->
+                        <div>
+                            <ul class="testimonios-lista">
+                                <!--Función A-->
+                                <li class="caja-funcion">
+                                    <!--Caja del icono-->
+                                    <div class="fondo-purpura">
+                                        <!--SVG-->
+                                        <svg width="35px" height="35px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="svg-funcion"><path d="M17.545 15.467l-3.779-3.779a6.15 6.15 0 0 0 .898-3.21c0-3.417-2.961-6.377-6.378-6.377A6.185 6.185 0 0 0 2.1 8.287c0 3.416 2.961 6.377 6.377 6.377a6.15 6.15 0 0 0 3.115-.844l3.799 3.801a.953.953 0 0 0 1.346 0l.943-.943c.371-.371.236-.84-.135-1.211zM4.004 8.287a4.282 4.282 0 0 1 4.282-4.283c2.366 0 4.474 2.107 4.474 4.474a4.284 4.284 0 0 1-4.283 4.283c-2.366-.001-4.473-2.109-4.473-4.474z"/></svg>
+                                    </div>
+                                    <!--H3-->                                    
+                                    <h3 class="caja-h3">Coordinación</h3>
+                                    <!--Párrafo-->                                   
+                                    <p class="caja-parrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis lectus vel <span class="subrayado">magna convallis consectetur</span>. Cras ante velit, eleifend ut nisi imperdiet, imperdiet ornare risus.</p>
+                                </li>
+                                <!--Función B-->
+                                <li class="caja-funcion">
+                                    <!--Caja del icono-->
+                                    <div class="fondo-purpura">
+                                        <!--SVG-->
+                                        <svg width="35px" height="35px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="svg-funcion"><path d="M17.545 15.467l-3.779-3.779a6.15 6.15 0 0 0 .898-3.21c0-3.417-2.961-6.377-6.378-6.377A6.185 6.185 0 0 0 2.1 8.287c0 3.416 2.961 6.377 6.377 6.377a6.15 6.15 0 0 0 3.115-.844l3.799 3.801a.953.953 0 0 0 1.346 0l.943-.943c.371-.371.236-.84-.135-1.211zM4.004 8.287a4.282 4.282 0 0 1 4.282-4.283c2.366 0 4.474 2.107 4.474 4.474a4.284 4.284 0 0 1-4.283 4.283c-2.366-.001-4.473-2.109-4.473-4.474z"/></svg>
+                                    </div>
+                                    <!--H3-->                                    
+                                    <h3 class="caja-h3">Dirección</h3>
+                                    <!--Párrafo-->                                   
+                                    <p class="caja-parrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis lectus vel magna convallis consectetur. Cras ante velit, eleifend ut nisi imperdiet, imperdiet ornare risus.</p>
+                                </li>
+                                <!--Función A-->
+                                <li class="caja-funcion">
+                                    <!--Caja del icono-->
+                                    <div class="fondo-purpura">
+                                        <!--SVG-->
+                                        <svg width="35px" height="35px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="svg-funcion"><path d="M17.545 15.467l-3.779-3.779a6.15 6.15 0 0 0 .898-3.21c0-3.417-2.961-6.377-6.378-6.377A6.185 6.185 0 0 0 2.1 8.287c0 3.416 2.961 6.377 6.377 6.377a6.15 6.15 0 0 0 3.115-.844l3.799 3.801a.953.953 0 0 0 1.346 0l.943-.943c.371-.371.236-.84-.135-1.211zM4.004 8.287a4.282 4.282 0 0 1 4.282-4.283c2.366 0 4.474 2.107 4.474 4.474a4.284 4.284 0 0 1-4.283 4.283c-2.366-.001-4.473-2.109-4.473-4.474z"/></svg>
+                                    </div>
+                                    <!--H3-->                                    
+                                    <h3 class="caja-h3">Gestión</h3>
+                                    <!--Párrafo-->                                   
+                                    <p class="caja-parrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis lectus vel magna convallis consectetur. Cras ante velit, eleifend ut nisi imperdiet, imperdiet ornare risus.</p>
+                                </li>
+                                <!--Función B-->
+                                <li class="caja-funcion">
+                                    <!--Caja del icono-->
+                                    <div class="fondo-purpura">
+                                        <!--SVG-->
+                                        <svg width="35px" height="35px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="svg-funcion"><path d="M17.545 15.467l-3.779-3.779a6.15 6.15 0 0 0 .898-3.21c0-3.417-2.961-6.377-6.378-6.377A6.185 6.185 0 0 0 2.1 8.287c0 3.416 2.961 6.377 6.377 6.377a6.15 6.15 0 0 0 3.115-.844l3.799 3.801a.953.953 0 0 0 1.346 0l.943-.943c.371-.371.236-.84-.135-1.211zM4.004 8.287a4.282 4.282 0 0 1 4.282-4.283c2.366 0 4.474 2.107 4.474 4.474a4.284 4.284 0 0 1-4.283 4.283c-2.366-.001-4.473-2.109-4.473-4.474z"/></svg>
+                                    </div>
+                                    <!--H3-->                                    
+                                    <h3 class="caja-h3">Investigación</h3>
+                                    <!--Párrafo-->                                   
+                                    <p class="caja-parrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis lectus vel magna convallis consectetur. Cras ante velit, eleifend ut nisi imperdiet, imperdiet ornare risus.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!--Estoy trabajando-->
+                    <section class="ajustar-ancho ocultar">
+                        <!--Encabezado-->
+                        <div class="encabezado">
+                            <h2>Testimonios</h2>
+                            <p class="subtitulo">Esto es lo que dicen de mí</p>
+                        </div>
+                        <!-- Swiper -->
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <h4>Consorci de Salut i Social de Catalunya (CSC)</h4>
+                                    <p class="caja-parrafo">Técnica de proyectos del ámbito social en Envelliment i Benestar (eib), área social del Consorci de Salut i Social de Catalunya (CSC), entidad pública con 40 años de trayectoria en el ámbito social y sanitario.</p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h4>La Sociedad Española de Geriatría y Gerontología (SEGG)</h4>
+                                    <p class="caja-parrafo">Socia y miembro del Comité de Acreditación de Calidad de Servicios Sociales para personas mayores (concretamente, de los servicios de ayuda a domicilio).</p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h4>Asociación Española de Envejecimiento Activo y Saludable</h4>
+                                    <p class="caja-parrafo">Miembro del Comité de Expertos Nacional</p>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
                     </section>
 
                     <!--Testimonios-->
-                    <section>
-                        <h2>Testimonios</h2>
+                    <section class="ajustar-ancho" id="testimonios">
+                        <!--Encabezado-->
+                        <div class="encabezado">
+                            <h2>Testimonios</h2>
+                            <p class="subtitulo">Esto es lo que dicen de mí</p>
+                        </div>
 
                         <!--Lista de testimonios-->
                         <ul class="testimonios-lista">
 
-                            <!--Testimonio 1-->
+                            <!--Testimonio 1: Lourdes-->
                             <li class="testimonio">
                                 <!--Cita-->
-                                <p class="testimonio-cita">"Sandra es una profesional implicada en el bienestar de las personas mayores. Su formación, su capacidad de trabajo y el dominio que demuestra con las nuevas tecnologías resultan muy interesantes desarrollando proyectos siempre de un alto nivel. Su motivación y capacidad para generar equipos de trabajo inspira a los otros profesionales de este sector a crecer".</p>
+                                <p class="testimonio-cita">"Sandra ha colaborado conmigo en un proyecto de Consultoría Internacional (EuroSocial+) en relación a la formación de cuidadores profesionales en Francia. Me parece una gran profesional muy competente, seria y responsable, con mucha sensibilidad y una motivación muy alta para trabajar bien y dar de sí lo mejor; a parte del conocimiento que también demuestra".</p>
 
                                 <!--Contenedor autor, cargo y avatar-->
                                 <div class="testimonio-persona">
                                     <!--Avatar-->
-                                    <img src="https://placehold.co/600x400" alt="" class="testimonio-avatar">
+                                    <img src="img/lourdes-berjemo.jpg" alt="Fotografía de Lourdes Bermejo" class="testimonio-avatar">
                                     
                                     <!--Contenedor del autor y el cargo-->
                                     <div>
                                         <!--Autor-->
-                                        <p class="testimonio-autor">Serena del Pino</p>
+                                        <p class="testimonio-autor">Lourdes Bermejo</p>
                                         <!--Cargo-->
-                                        <p class="testimonio-cargo">Psicóloga Forense y Psicogerontóloga, especialista en SAD</p>
+                                        <p class="testimonio-cargo">Doctora en Ciencias de la Educación y experta en Intervención Social Integral</p>
                                     </div>
                                 </div>
                             </li>
 
-                            <!--Testimonio 2-->
+                            <!--Testimonio 2: Serena-->
                             <li class="testimonio testimonio-impar">
                                 <!--Cita-->
                                 <p class="testimonio-cita">"Sandra es una profesional implicada en el bienestar de las personas mayores. Su formación, su capacidad de trabajo y el dominio que demuestra con las nuevas tecnologías resultan muy interesantes desarrollando proyectos siempre de un alto nivel. Su motivación y capacidad para generar equipos de trabajo inspira a los otros profesionales de este sector a crecer".</p>
@@ -91,7 +207,7 @@
                                 <!--Contenedor autor, cargo y avatar-->
                                 <div class="testimonio-persona">
                                     <!--Avatar-->
-                                    <img src="https://placehold.co/600x400" alt="" class="testimonio-avatar">
+                                    <img src="img/serena-pino.jpeg" alt="Fotografía de Serena del Pino" class="testimonio-avatar">
                                     
                                     <!--Contenedor del autor y el cargo-->
                                     <div>
@@ -103,42 +219,82 @@
                                 </div>
                             </li>
 
-                            <!--Testimonio 3-->
+                            <!--Testimonio 3: Iván-->
                             <li class="testimonio">
                                 <!--Cita-->
-                                <p class="testimonio-cita">"Sandra es una profesional implicada en el bienestar de las personas mayores. Su formación, su capacidad de trabajo y el dominio que demuestra con las nuevas tecnologías resultan muy interesantes desarrollando proyectos siempre de un alto nivel. Su motivación y capacidad para generar equipos de trabajo inspira a los otros profesionales de este sector a crecer".</p>
+                                <p class="testimonio-cita">"Sandra es pura energía, perseverancia y superación en todo aquello que realiza. Transmite pasión por la mejora de la calidad de vida de los mayores. Continuamente está en formación constante, reciclándose para ofrecer una visión e intervención innovadora. Sin duda, es una compañera excelente. No os arrepentiréis de tenerla en vuestro equipo, es una apuesta segura".</p>
 
                                 <!--Contenedor autor, cargo y avatar-->
                                 <div class="testimonio-persona">
                                     <!--Avatar-->
-                                    <img src="https://placehold.co/600x400" alt="" class="testimonio-avatar">
+                                    <img src="img/ivan-sanchez.jpg" alt="Fotografía de Iván Sánchez" class="testimonio-avatar">
                                     
                                     <!--Contenedor del autor y el cargo-->
                                     <div>
                                         <!--Autor-->
-                                        <p class="testimonio-autor">Serena del Pino</p>
+                                        <p class="testimonio-autor">Iván Sánchez</p>
                                         <!--Cargo-->
-                                        <p class="testimonio-cargo">Psicóloga Forense y Psicogerontóloga, especialista en SAD</p>
+                                        <p class="testimonio-cargo">Psicogerontólogo e Investigador, RBEC en Atención Primaria</p>
                                     </div>
                                 </div>
                             </li>
 
-                            <!--Testimonio 4-->
+                            <!--Testimonio 4: Laura-->
                             <li class="testimonio testimonio-impar">
                                 <!--Cita-->
-                                <p class="testimonio-cita">"Sandra es una profesional implicada en el bienestar de las personas mayores. Su formación, su capacidad de trabajo y el dominio que demuestra con las nuevas tecnologías resultan muy interesantes desarrollando proyectos siempre de un alto nivel. Su motivación y capacidad para generar equipos de trabajo inspira a los otros profesionales de este sector a crecer".</p>
+                                <p class="testimonio-cita">"Sandra es una profesional con talento, creatividad y una visión global y humana de la atención a las personas. Ha afrontado con empeño retos en la formación de personas cuidadoras profesionales. Como investigadora, ha codiseñado protocolos de investigación, participando en congresos científicos y divulgativos como comunicadora y ponente".</p>
 
                                 <!--Contenedor autor, cargo y avatar-->
                                 <div class="testimonio-persona">
                                     <!--Avatar-->
-                                    <img src="https://placehold.co/600x400" alt="" class="testimonio-avatar">
+                                    <img src="img/laura-atares.jpg" alt="Fotografia de Laura Atarés" class="testimonio-avatar">
                                     
                                     <!--Contenedor del autor y el cargo-->
                                     <div>
                                         <!--Autor-->
-                                        <p class="testimonio-autor">Serena del Pino</p>
+                                        <p class="testimonio-autor">Laura Atarés</p>
                                         <!--Cargo-->
-                                        <p class="testimonio-cargo">Psicóloga Forense y Psicogerontóloga, especialista en SAD</p>
+                                        <p class="testimonio-cargo">Coordinadora Regional de Vivir Mejor en Casa (SEGG) y Terapeuta Ocupacional</p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!--Testimonio 5: Ivanna-->
+                            <li class="testimonio">
+                                <!--Cita-->
+                                <p class="testimonio-cita">"Sandra es una persona apasionada y altamente implicada. Destaco de su profesionalidad su polivalencia, proactividad y planificación del trabajo. Aún contando con una formación envidiable, mantiene el afán por ampliar su conocimiento en el sector. Personalmente puedo afirmar que me ha inspirado en múltiples facetas de mi vida. Tiene todos los ingredientes para el éxito profesional y para mí es una líder".</p>
+
+                                <!--Contenedor autor, cargo y avatar-->
+                                <div class="testimonio-persona">
+                                    <!--Avatar-->
+                                    <img src="img/ivanna-ribes.jpeg" alt="Fotografía de Ivanna Ribes" class="testimonio-avatar">
+                                    
+                                    <!--Contenedor del autor y el cargo-->
+                                    <div>
+                                        <!--Autor-->
+                                        <p class="testimonio-autor">Ivanna Ribes</p>
+                                        <!--Cargo-->
+                                        <p class="testimonio-cargo">Técnica de Recursos Humanos, L'Onada Serveis</p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!--Testimonio 6: Mireia-->
+                            <li class="testimonio testimonio-impar">
+                                <!--Cita-->
+                                <p class="testimonio-cita">"Sandra es proactiva y perseverante, fíjandose en su rumbo, bien claro, hacia la atención digna de las personas de la tercera y cuarta edad. Quiere fomentar la atención centrada en la persona y erradicar el edadismo. Es un placer contar con ella en los proyectos en los que hemos coincidido".</p>
+
+                                <!--Contenedor autor, cargo y avatar-->
+                                <div class="testimonio-persona">
+                                    <!--Avatar-->
+                                    <img src="img/mireia-lopez.jpeg" alt="Fotografía de Mireia López" class="testimonio-avatar">
+                                    
+                                    <!--Contenedor del autor y el cargo-->
+                                    <div>
+                                        <!--Autor-->
+                                        <p class="testimonio-autor">Mireia López</p>
+                                        <!--Cargo-->
+                                        <p class="testimonio-cargo">Psicogerontóloga especializada en Dirección de centros, Referente de Bienestar Emocional Comunitaria</p>
                                     </div>
                                 </div>
                             </li>
@@ -146,11 +302,55 @@
 
                     </section>
 
-                </main>
+                <!--Redes sociales-->
+                <section class="seccion-redes" id="contacta">
+                    <h2 class="h2-seccion">Conecta conmigo a través de redes sociales</h2>
+                    <ul class="lista-redes">
+                        <!--Twitter-->
+                        <li>
+                            <a href="https://twitter.com/sandra_pamies" target="_blank" aria-label="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg"><path d="M18.42,14.009L27.891,3h-2.244l-8.224,9.559L10.855,3H3.28l9.932,14.455L3.28,29h2.244l8.684-10.095,6.936,10.095h7.576l-10.301-14.991h0Zm-3.074,3.573l-1.006-1.439L6.333,4.69h3.447l6.462,9.243,1.006,1.439,8.4,12.015h-3.447l-6.854-9.804h0Z" fill="currentColor"></path></svg>
+                            </a>
+                        </li>
+                        <!--Instagram-->
+                        <li>
+                            <a href="https://www.instagram.com/sandrapamies/?hl=es" target="_blank" aria-label="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg"><path d="M10.202,2.098c-1.49,.07-2.507,.308-3.396,.657-.92,.359-1.7,.84-2.477,1.619-.776,.779-1.254,1.56-1.61,2.481-.345,.891-.578,1.909-.644,3.4-.066,1.49-.08,1.97-.073,5.771s.024,4.278,.096,5.772c.071,1.489,.308,2.506,.657,3.396,.359,.92,.84,1.7,1.619,2.477,.779,.776,1.559,1.253,2.483,1.61,.89,.344,1.909,.579,3.399,.644,1.49,.065,1.97,.08,5.771,.073,3.801-.007,4.279-.024,5.773-.095s2.505-.309,3.395-.657c.92-.36,1.701-.84,2.477-1.62s1.254-1.561,1.609-2.483c.345-.89,.579-1.909,.644-3.398,.065-1.494,.081-1.971,.073-5.773s-.024-4.278-.095-5.771-.308-2.507-.657-3.397c-.36-.92-.84-1.7-1.619-2.477s-1.561-1.254-2.483-1.609c-.891-.345-1.909-.58-3.399-.644s-1.97-.081-5.772-.074-4.278,.024-5.771,.096m.164,25.309c-1.365-.059-2.106-.286-2.6-.476-.654-.252-1.12-.557-1.612-1.044s-.795-.955-1.05-1.608c-.192-.494-.423-1.234-.487-2.599-.069-1.475-.084-1.918-.092-5.656s.006-4.18,.071-5.656c.058-1.364,.286-2.106,.476-2.6,.252-.655,.556-1.12,1.044-1.612s.955-.795,1.608-1.05c.493-.193,1.234-.422,2.598-.487,1.476-.07,1.919-.084,5.656-.092,3.737-.008,4.181,.006,5.658,.071,1.364,.059,2.106,.285,2.599,.476,.654,.252,1.12,.555,1.612,1.044s.795,.954,1.051,1.609c.193,.492,.422,1.232,.486,2.597,.07,1.476,.086,1.919,.093,5.656,.007,3.737-.006,4.181-.071,5.656-.06,1.365-.286,2.106-.476,2.601-.252,.654-.556,1.12-1.045,1.612s-.955,.795-1.608,1.05c-.493,.192-1.234,.422-2.597,.487-1.476,.069-1.919,.084-5.657,.092s-4.18-.007-5.656-.071M21.779,8.517c.002,.928,.755,1.679,1.683,1.677s1.679-.755,1.677-1.683c-.002-.928-.755-1.679-1.683-1.677,0,0,0,0,0,0-.928,.002-1.678,.755-1.677,1.683m-12.967,7.496c.008,3.97,3.232,7.182,7.202,7.174s7.183-3.232,7.176-7.202c-.008-3.97-3.233-7.183-7.203-7.175s-7.182,3.233-7.174,7.203m2.522-.005c-.005-2.577,2.08-4.671,4.658-4.676,2.577-.005,4.671,2.08,4.676,4.658,.005,2.577-2.08,4.671-4.658,4.676-2.577,.005-4.671-2.079-4.676-4.656h0" fill="currentColor"></path></svg>
+                            </a>
+                        </li>
+                        <!--Youtube-->
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCrf6o3vjKCfecgK-vSeArCQ" target="_blank" aria-label="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg"><path d="M31.331,8.248c-.368-1.386-1.452-2.477-2.829-2.848-2.496-.673-12.502-.673-12.502-.673,0,0-10.007,0-12.502,.673-1.377,.37-2.461,1.462-2.829,2.848-.669,2.512-.669,7.752-.669,7.752,0,0,0,5.241,.669,7.752,.368,1.386,1.452,2.477,2.829,2.847,2.496,.673,12.502,.673,12.502,.673,0,0,10.007,0,12.502-.673,1.377-.37,2.461-1.462,2.829-2.847,.669-2.512,.669-7.752,.669-7.752,0,0,0-5.24-.669-7.752ZM12.727,20.758V11.242l8.364,4.758-8.364,4.758Z" fill="currentColor"></path></svg>
+                            </a>
+                        </li>
+                        <!--LinkedIn-->
+                        <li>
+                            <a href="https://www.linkedin.com/in/sandrap%C3%A0mies/" target="_blank" aria-label="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="svg"><path d="M26.111,3H5.889c-1.595,0-2.889,1.293-2.889,2.889V26.111c0,1.595,1.293,2.889,2.889,2.889H26.111c1.595,0,2.889-1.293,2.889-2.889V5.889c0-1.595-1.293-2.889-2.889-2.889ZM10.861,25.389h-3.877V12.87h3.877v12.519Zm-1.957-14.158c-1.267,0-2.293-1.034-2.293-2.31s1.026-2.31,2.293-2.31,2.292,1.034,2.292,2.31-1.026,2.31-2.292,2.31Zm16.485,14.158h-3.858v-6.571c0-1.802-.685-2.809-2.111-2.809-1.551,0-2.362,1.048-2.362,2.809v6.571h-3.718V12.87h3.718v1.686s1.118-2.069,3.775-2.069,4.556,1.621,4.556,4.975v7.926Z" fill="currentColor"></path></svg>
+                            </a>
+                        </li>
+
+                        <!--Email-->
+                        <li>
+                            <a href="mailto:hola@sandrapamies.com" target="_blank" aria-label="Enviar un correo electrónico">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 42 42" class="svg"><path fill="currentColor" d="M40.5 31.5v-18S22.3 26.2 20.53 26.859C18.79 26.23.5 13.5.5 13.5v18c0 2.5.53 3 3 3h34c2.529 0 3-.439 3-3zm-.029-21.529c0-1.821-.531-2.471-2.971-2.471h-34c-2.51 0-3 .78-3 2.6l.03.28s18.069 12.44 20 13.12c2.04-.79 19.97-13.4 19.97-13.4l-.029-.129z" fill="currentColor"/></svg>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </main>
 
                 <!--Footer-->
                 <footer>
+                    <div class="pie">
+                        <p>Sandra Pàmies, 2025 © Todos los derechos reservados</p>
+                        <p>Sitio web desarrollado por Santiago García</p>
+                    </div>
                 </footer>
-
+        <script src="script/scroll.js"></script>
+        <script src="script/menu.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="script/swiper.js"></script>
         </body>
 </HTML>

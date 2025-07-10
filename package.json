@@ -1,12 +1,16 @@
 {
-  "name": "template",
+  "name": "web-sandra",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Proyecto web de Sandra",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "clean": "rm -rf .parcel-cache dist"
+  },
+  "devDependencies": {
+    "parcel": "^2.10.0"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "description": ""
+  "license": "MIT"
 }
