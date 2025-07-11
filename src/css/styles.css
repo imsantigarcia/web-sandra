@@ -328,7 +328,7 @@ p {
     background-color: #ffffff;
     border-radius: 8px;
     padding: 2rem;
-    box-shadow: 2px 2px 20px rgba(222, 221, 222, 0.44);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
     list-style-type: none;
     transition: 0.5s;
 }
