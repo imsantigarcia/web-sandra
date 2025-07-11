@@ -166,10 +166,19 @@ h1 {
     white-space: nowrap;
 }
 
+h2 {
+    font-weight: ;
+}
+
 /* H2 */
 
-h2 {
-    font-weight: 500;
+.h2-fondo {
+    font-weight: 300;
+    background-color: #362476;
+    color: white;
+    padding: 0.3rem 0.7rem;
+    border-radius: 6px;
+    font-size: 1.3rem;
 }
 
 /* Párrafos */
@@ -184,7 +193,7 @@ p {
 .encabezado {
     display: flex;
     gap: 1rem;
-    align-items: baseline;
+    align-items: center;
     margin-bottom: 2rem;
 }
 
@@ -235,6 +244,31 @@ p {
   );
 }
 
+/* ===================
+   Sobre mí
+=================== */
+
+ .imageDiv
+    {
+        margin-left: 100px;
+        background: #fff;
+        display: block;
+        width: 345px;
+        height: 220px;
+        padding: 10px;
+        border-radius: 2px 2px 2px 2px;
+        -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+        -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    }
+    
+.bottomDiv {
+       position:relative;
+       bottom:px;
+       width: 100px;
+       height: 100px;
+       left:150px;
+    }
 
 /* ===================
    Formación
@@ -380,7 +414,7 @@ p {
     transition: 0.5s;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1.5rem;
 }
 
 /* H3 */
@@ -401,7 +435,7 @@ p {
 /* Caja púrpura */
 
 .fondo-purpura {
-    background-color: #362476;
+    background-color: #C3B1E1;
     padding: 0.5rem;
     display: inline-block;
     border-radius: 5px;
@@ -612,6 +646,7 @@ gray-950	#030712
 
     .encabezado {
         flex-direction: column;
+        align-items: start;
     }
 
     /* móviles grandes y tablets vertical */ 
