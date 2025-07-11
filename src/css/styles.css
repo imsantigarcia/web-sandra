@@ -26,7 +26,7 @@
 .ajustar-ancho {
     max-width: 1024px;
     margin: 2rem auto;
-    padding: 1rem;
+    padding: 1rem 2rem;
 }
 
 /* Separación header y main */
@@ -176,9 +176,8 @@ p {
 
 .encabezado {
     display: flex;
-    flex-direction: column;
     gap: 1rem;
-    align-items: center;
+    align-items: baseline;
     margin-bottom: 2rem;
 }
 
@@ -187,25 +186,57 @@ p {
 }
 
 /* ===================
-   Swiper
+   Tarjeta
 =================== */
 
-    .swiper {
-      width: 100%;
-      height: 100%;
-    }
+/* From Uiverse.io by alexmaracinaru */ 
+.card {
+  width: 190px;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 6px;
+  margin-bottom: 3rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
 
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 7px;
-      padding: 2rem 0rem;
-      width: 50%;
-    }
+.card-image {
+  background-color: rgb(236, 236, 236);
+  width: 100%;
+  height: 230px;
+  border-radius: 6px 6px 0 0;
+}
+
+.category {
+  font-size: 0.9em;
+  font-weight: 600;
+  color:#7758e9;
+  padding: 10px 7px 0;
+}
+
+.heading {
+  font-weight: 600;
+  color: rgb(88, 87, 87);
+  padding: 7px;
+}
+
+.author {
+  color: gray;
+  font-weight: 400;
+  font-size: 0.9rem;
+  padding-top: 0.5rem;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.name:hover {
+  cursor: pointer;
+}
+
+/* ===================
+   Swiper
+=================== */
 
 /* ===================
    Trayectoria
@@ -412,7 +443,7 @@ p {
 
 footer {
     background-color: #362476;
-    padding: 2rem 0rem;
+    padding: 2rem 2rem;
 }
 
 /* Ajustar el ancho del contenido */
