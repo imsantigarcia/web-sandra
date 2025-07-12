@@ -29,6 +29,12 @@
     padding: 1rem 2rem;
 }
 
+.ajustar-ancho-largo {
+    max-width: 1280px;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+}
+
 /* Separación header y main */
 
 main {
@@ -118,7 +124,7 @@ h1, h2{
     color: #362476;
 }
 
-h1 {
+.tipografico {
     font-size: 1.6rem;
     white-space: nowrap;
 }
@@ -181,12 +187,19 @@ p {
 /* Contenedor del hero */
 
 .abv {
-    height: 60vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1;
+    background-color: #7758e9;
 }
+
+.abv-texto h1,
+.abv-texto p {
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+}
+
 
 /* Contenedor del texto */
 
@@ -198,6 +211,7 @@ p {
     z-index: 1;
 }
 
+/* Vídeo de fondo */
 .video-bg {
     position: absolute;
     top: 0;
@@ -209,6 +223,57 @@ p {
 }
 
 
+/* Texto de presentación */
+
+.texto-presentacion {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 200;
+    color: #6b7280;
+}
+
+.hero {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+}
+
+/* ===================
+   Logos
+=================== */
+
+.logo-slider {
+    overflow: hidden;
+    padding: 30px 0 0 0;
+    white-space: nowrap;
+    position: relative;
+}
+
+.logo-slider:hover .logos-slide {
+    animation-play-state: paused;
+}
+
+.logos-slide {
+    display: inline-block;
+    animation: 45s slide infinite linear;
+}
+
+.logos-slide img {
+    width: 183px;
+    height: 83px;
+    margin: 0 40px;
+}
+
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
 
 /* ===================
    Banderas
@@ -469,34 +534,43 @@ p {
    Sobre mí
 =================== */
 
+/* Container */
+
 .sobre-mi {
-  display: flex;
-  gap: 2rem;
-  position: relative;
-  margin: 4rem 0;
-  align-items: center; /* opcional, para centrar verticalmente */
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
 }
 
-.sobre-mi .encabezado {
-  width: 100%;
-  margin-bottom: 2rem;
-  flex-basis: 100%;
+/* Título */
+
+.sobre-mi-h2 {
+    color: #362476;
+    font-size: 1.6rem;
+    font-weight: 300;
 }
 
-.sobre-mi .img-lado {
-  position: relative;
-  z-index: 1;
-  flex: 1;
+/* Texto */
+
+.sobre-mi-texto {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #6b7280;
 }
 
-.sobre-mi .texto-superpuesto {
-  background-color: white;
-  padding: 2rem;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  position: relative;
-  z-index: 2;
-  transform: translateX(-40px); /* Ajústalo si la imagen está a la izquierda */
-  flex: 1;
+.azul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #7758e9;
+    width: 100%;
+}
+
+.rosa {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
 }
 
 /* ===================
@@ -580,7 +654,9 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 6rem 0rem 2rem 0rem;
+    padding: 6rem 2rem 4rem 2rem;
+    margin: 6rem 0rem 0rem 0rem;
+    background-color: #c3b1e16d;
 }
 
 .h2-seccion {
@@ -608,9 +684,35 @@ p {
     color: #7758e9; 
 }
 
+
 /* ===================
    Footer
 =================== */
+
+.fondo-rosa-suave {
+    background-color: #C3B1E1;
+}
+
+.custom-shape-divider-top-1752335584 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1752335584 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.custom-shape-divider-top-1752335584 .shape-fill {
+    fill: #FFFFFF;
+}
 
 footer {
     background-color: #362476;
@@ -650,6 +752,12 @@ gray-950	#030712
 
 @media (max-width: 768px) 
 { 
+
+    /* Hero */
+
+    .hero {
+        height: 60vh;
+    }
 
     /* Encabezado */
 
